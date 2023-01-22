@@ -1,0 +1,49 @@
+#home-page{
+    width: 100%;
+    height: 100%;
+
+}
+
+#home-page-landing{
+    width: 100%;
+    height: 100%;
+    background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0)), 
+    url("https://images.creativemarket.com/0.1.0/ps/4833749/1820/1213/m1/fpnw/wm1/wbqwlmk8mlit5kyyjpb0oeujbpxl7cdhdsl5x2gpo2chgdpuw1ulo22kdnnhhl76-.jpg?1532958573&s=79f2b8451dbf2e4e01281e7c7cc641e5");
+    background-size: cover;
+    background-position:center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    min-height: 800px;
+
+}
+
+#landing-left {
+    display: flex ;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#landing-left-content{
+    text-align: right;
+    padding: 1em 1em 1em 3em;
+
+}
+
+#landing-left-content h1{
+    font-size: 4em;
+}
+
+#landing-left-content p {
+    font-size: 2em;
+}
+
+#landing-left-content button {
+    font-size: 1.5em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+

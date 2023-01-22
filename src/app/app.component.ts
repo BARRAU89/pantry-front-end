@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RegisterService } from './service/user/register.service';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '00Pantry-FE';
+
+  constructor (public reg:RegisterService, public loginSheet: MatBottomSheet){}
 }

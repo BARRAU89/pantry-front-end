@@ -1,0 +1,27 @@
+<mat-card  class="app-card">
+
+    <mat-card-header>
+      <mat-card-title>
+        {{ingredient?.ingredientName | titlecase}}
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <h6 class="h6">Id: {{ingredient?.id}}, On Hand: {{ingredient?.inventoryCount}}</h6>  
+      <p>Weight: {{ingredient?.ingredientWeight}} Pounds</p>
+      <h3>Calories: {{ingredient?.ingredientCalories}} KCal</h3>
+      <img src="{{ingredient?.ingredientImage}}" width="200">
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button 
+        class ="button" 
+        mat-button color="warn" 
+        (click)="onDeleteIngredient()">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button class="button" mat-button color="disabled" *ngIf="ingredient?.inventoryCount! == 0"> We ran out of Stock! </button>
+      <!-- <button class="button" mat-button color="primary" *ngIf="ingredient?.inventoryCount! > 0"(click)="addIngredientToKitchenTable()"> Add to Recipe </button> -->
+    </mat-card-actions>
+
+  </mat-card>

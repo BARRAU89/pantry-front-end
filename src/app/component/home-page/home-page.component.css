@@ -1,0 +1,81 @@
+#nav-bar{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5em;
+    z-index: 0;
+}
+
+#nav-bar-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+
+}
+
+#nav-bar-right, #nav-bar-left{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 2em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: rgb(6, 6, 6);
+
+}
+
+#nav-bar-right{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10em;;
+    
+}
+
+.nav-bar-items {
+    font-size: 1em;
+    display: inline-block;
+    cursor: pointer;
+}
+/* /////////////////////////////////////// */
+#create-button {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    flex-direction: column;
+    text-align: right;
+    color: white;
+    font-size: medium;
+}
+
+/* /////////////////////////////////////// */
+
+#main-page{
+    width: 100%;
+    height: 100%;
+
+}
+
+#main-page-landing{
+    width: 100%;
+    height: 100%;
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+    url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.creativemarket.com%2F0.1.0%2Fps%2F1012296%2F1360%2F875%2Fm1%2Ffpnw%2Fwm1%2Fxz29diwpha9wkxnh1h7cdp30wfjnpsaozzkrgfbtgygkvaoawnbg6n6hw3cysofm-.jpg%3F1456014773%26s%3De351f0d7e9944abd9efe30f7d6bdffb4&f=1&nofb=1&ipt=e8c3f6918b849a772d87edb7799170f0683a5abb19242fede2cdf3f2a0dbf9f2&ipo=images");
+    background-size: cover;
+    background-position:center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    min-height: 800px;
+    
+
+}
+
+#container{
+    margin-top: 50px;
+    color: white;
+    flex-direction: row;
+    justify-content: flex-end;
+}

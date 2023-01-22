@@ -1,0 +1,47 @@
+<div class="create-ingredient">
+    <h3>New Ingredient</h3>
+
+   <!-- {{userForm.value | json}} -->
+    <form #userForm="ngForm" >
+        <p>Name:
+            <input 
+            required type="text" 
+            name="ingredientName"
+            
+            [(ngModel)]="ingredientName"            
+            placeholder="Enter your new Ingredient name"><br>
+        </p>
+        <p>Weight:
+            <input 
+            required type="number"  
+            name="weight"
+            [(ngModel)]="ingredientWeight" 
+            placeholder="Enter the Ingredient initial Weight"><br>
+        </p>
+        <p>Calories:
+            <input 
+            required type="number"  
+            name="calories"
+            [(ngModel)]="ingredientCalories" 
+            placeholder="Enter the Ingredient Calories"><br>
+        </p>
+        <p>Quantity:
+            <input 
+            required type="number"  
+            name="onHand"
+            [(ngModel)]="inventoryCount" 
+            placeholder="Enter the Ingredient Calories"><br>
+        </p>
+        <p>Ingredient image url:
+            <input 
+            required type="text"  
+            name="image"
+            [(ngModel)]="ingredientImage"  
+            placeholder="Enter the Ingredient Calories"><br>
+        </p>
+
+        <button (click)="is.createNewIngredient(ingredientName, ingredientWeight, ingredientCalories, ingredientImage, inventoryCount)"> Add Ingredient </button>
+        
+
+    </form>
+</div>

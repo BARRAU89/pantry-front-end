@@ -1,0 +1,28 @@
+<div id="autehticator">
+    <mat-card id=authenticator-content>
+
+        <mat-card-header>
+            <mat-card-title *ngIf="reg.isLoginState()">Login</mat-card-title>
+            <mat-card-title *ngIf="reg.isRegisterState()">Register</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content *ngIf="reg.isLoginState()">
+            <input placeholder="Username" type="text" [(ngModel)]="username">
+            <input placeholder="Password" type="password" [(ngModel)]="password">
+            <button mat-flat-button color="warn" (click)="reg.tryLog(username, password)">Login</button>
+        </mat-card-content>
+        
+        <mat-card-content *ngIf="reg.isRegisterState()">
+            <input placeholder="Create a new Username" type="text" [(ngModel)]="username">
+            <input placeholder="Set a Password" type="password" [(ngModel)]="password">
+            <button mat-flat-button color="warn" (click)="reg.tryReg(username, password)">Create</button>
+        </mat-card-content>
+        
+        <div></div>
+
+        <mat-card-actions align="end">
+            <button mat-flat-button (click)="reg.onCreateAccount()">Create an Account</button>
+            <button mat-flat-button (click)="reg.onLogin()">Login</button>
+        </mat-card-actions>
+    </mat-card>
+</div> 

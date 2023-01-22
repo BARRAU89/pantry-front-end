@@ -1,0 +1,47 @@
+<div id="main-page">
+    <div id="main-page-landing">
+    
+        <!-- Header -->
+        <div *ngIf="reg.isLoggedIn != false" id="nav-bar">
+            <div id="nav-bar-content">
+            <div id="nav-bar-left">
+                
+            </div>
+            <div id="nav-bar-right">
+                <div style="font-size: 1.5em; color: white" class="nav-bar-items">Hello, {{reg.getUserName() | titlecase}}</div>
+                <div (click)="reg.onLogOutClick()"
+                style="font-size: 1.5em; color: white " class="nav-bar-items">Logout</div>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Body -->
+        <div id="create-button">
+        <p> Add Ingredient <button mat-fab color="warn"  (click)="is.onCreateIngredientClick()"><mat-icon>add</mat-icon></button> </p><!---->
+        <p> Create Recipe<button mat-fab color="primary" ><mat-icon>restaurant_menu</mat-icon></button> </p> <!--(click)="rs.onCreateRecipeClick()"-->
+        </div>
+    
+        <!-- To display ingredients created -->
+    
+        <div id="container">
+            <div id="left">
+                <h1>Ingredients</h1>
+                <app-ingredient *ngFor="let ingredient of is.getIngredients()" [ingredient]="ingredient"></app-ingredient>
+            </div>
+        </div>
+    
+    
+         <!-- To display recipes created -->
+    
+         <!-- <div id="container">
+            <div id="right">
+                <h1>Recipes</h1>
+                <app-recipe *ngFor="let recipe of rs.getRecipes()" [recipe]="recipe"></app-recipe>
+            </div>
+        </div> -->
+    
+    
+    
+    
+    </div>
+    </div>
